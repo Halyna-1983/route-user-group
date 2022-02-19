@@ -4,10 +4,10 @@ import styles from './Navigation.module.css';
 const Navigation = () => (
   <nav>
     <NavLink
-      exact
+      exact="true"
       to="/"
       className={styles.link}
-      activeClassName={styles.activeLink}
+      // activeClassName={styles.activeLink}
     >
       Welcome
     </NavLink>
@@ -15,7 +15,7 @@ const Navigation = () => (
     <NavLink
       to="/users"
       className={styles.link}
-      activeClassName={styles.activeLink}
+      // activeClassName={styles.activeLink}
     >
       Users
     </NavLink>
@@ -23,7 +23,7 @@ const Navigation = () => (
     <NavLink
       to="/groups"
       className={styles.link}
-      activeClassName={styles.activeLink}
+      // activeClassName={styles.activeLink}
     >
       Groups
     </NavLink>

@@ -8,6 +8,9 @@
 }
 
 .activeLink {
-  composes: link;
+  /* composes: link; */
   color: #2a363b;
+}
+.link:hover {
+  color: red;
 }
