@@ -7,7 +7,6 @@ const Navigation = () => (
       exact="true"
       to="/"
       className={styles.link}
-      // activeClassName={styles.activeLink}
     >
       Welcome
     </NavLink>
@@ -15,7 +14,6 @@ const Navigation = () => (
     <NavLink
       to="/users"
       className={styles.link}
-      // activeClassName={styles.activeLink}
     >
       Users
     </NavLink>
@@ -23,7 +21,6 @@ const Navigation = () => (
     <NavLink
       to="/groups"
       className={styles.link}
-      // activeClassName={styles.activeLink}
     >
       Groups
     </NavLink>
