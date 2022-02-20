@@ -3,7 +3,9 @@ import style from "./Users.module.css";
 
 const ReadOnlyRow = ({ contact, handleEditClick, handleDeleteClick }) => {
   return (
-    <tr className={style.item}>
+    <tr
+      className={style.item}
+    >
       <td>{contact.userName}</td>
       <td>{contact.email}</td>
       <td>{contact.date}</td>

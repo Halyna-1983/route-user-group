@@ -1,4 +1,5 @@
 import React from "react";
+import style from "./Users.module.css";
 
 const EditableRow = ({
   editFormData,
@@ -7,8 +8,8 @@ const EditableRow = ({
 }) => {
   return (
     <tr>
-      <td>
-        <input
+      <td >
+        <input className={ style.inputEditing}
           type="text"
           required="required"
           placeholder="Enter a name..."
@@ -18,7 +19,7 @@ const EditableRow = ({
         ></input>
       </td>
       <td>
-        <input
+        <input className={ style.inputEditing}
           type="email"
           required="required"
           placeholder="Enter an email..."
@@ -28,28 +29,34 @@ const EditableRow = ({
         ></input>
       </td>
       <td>
-        <input
+        <input className={ style.inputEditing}
           type="date"
           required="required"
           placeholder="Enter date..."
           name="date"
           value={editFormData.date}
           onChange={handleEditFormChange}
+          disabled
         ></input>
       </td>
       <td>
-        <input
+        <select className={ style.inputEditing}
           type="text"
-          required="required"
-          placeholder="Enter an group..."
           name="group"
-          value={editFormData.group}
+          required="required"
+          placeholder="choose"  
+           value={editFormData.group}
           onChange={handleEditFormChange}
-        ></input>
+              >
+              <option value="React">React</option>
+              <option value="Angular">Angular</option>
+                <option value="Vue">Vue</option>
+                <option value="Node">Node.js</option>
+              </select>
       </td>
       <td>
-        <button type="submit">Save</button>
-        <button type="button" onClick={handleCancelClick}>
+        <button className={style.btn} type="submit">Save</button>
+        <button className={style.btn} type="button" onClick={handleCancelClick}>
           Cancel
         </button>
       </td>

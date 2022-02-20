@@ -13,7 +13,7 @@ const Users = () => {
   const [addFormData, setAddFormData] = useState({
     userName: "",
     email: "",
-    date: null,
+    date: new Date().toLocaleDateString(),
     group: "",
   });
 
@@ -124,7 +124,9 @@ const Users = () => {
       <form onSubmit={handleEditFormSubmit}>
         <table>
           <thead>
-            <tr className={style.item}>
+                <tr
+                  className={style.item}
+                >
               <th>Name</th>
               <th>Email</th>
               <th>Date</th>
@@ -156,34 +158,27 @@ const Users = () => {
 
       <h2>Add User</h2>
       <form onSubmit={handleAddFormSubmit}>
-        <input
+        <input className={ style.inputEditing}
           type="text"
           name="userName"
           required="required"
           placeholder="Enter a name..."
           onChange={handleAddFormChange}
         />
-        <input
+        <input className={ style.inputEditing}
          type="email"
           name="email"
           required="required"
           placeholder="Enter an email..."
           onChange={handleAddFormChange}
         />
-        <input
-          type="date"
-          name="date"
-          required="required"
-          placeholder="Enter date..."
-          onChange={handleAddFormChange}
-        />
-        <select
+          <select className={ style.inputEditing}
           type="text"
           name="group"
           required="required"
-          placeholder="choose group"
-                        onChange={handleAddFormChange}
-                        className={style.input}
+          placeholder="choose"
+          onChange={handleAddFormChange}
+                  
               >
               <option value="React">React</option>
               <option value="Angular">Angular</option>
