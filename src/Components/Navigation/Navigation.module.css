@@ -7,10 +7,11 @@
   font-size: 18px;
 }
 
-.activeLink {
-  /* composes: link; */
+/* .activeLink {
+  composes: link;
   color: #2a363b;
-}
+} */
+
 .link:hover {
-  color: red;
+  color: darkseagreen;
 }

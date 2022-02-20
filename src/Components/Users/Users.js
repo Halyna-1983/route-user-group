@@ -1,7 +1,6 @@
 import React, { useState, Fragment } from "react";
 import { nanoid } from "nanoid";
 import PageHeading from '../PageHeading/PageHeading';
-// import "./App.css";
 import data from "../../mock-data.json";
 import ReadOnly from "./Readonly";
 import Edit from "./Edit";
@@ -124,14 +123,12 @@ const Users = () => {
       <form onSubmit={handleEditFormSubmit}>
         <table>
           <thead>
-                <tr
-                  className={style.item}
-                >
+            <tr className={style.item}>
               <th>Name</th>
               <th>Email</th>
               <th>Date</th>
-            <th>Group</th>
-            <th> </th>
+              <th>Group</th>
+              <th> </th>
             </tr>
           </thead>
           <tbody>
@@ -178,7 +175,7 @@ const Users = () => {
           required="required"
           placeholder="choose"
           onChange={handleAddFormChange}
-                  
+                        
               >
               <option value="React">React</option>
               <option value="Angular">Angular</option>

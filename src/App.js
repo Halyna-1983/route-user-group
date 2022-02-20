@@ -3,7 +3,7 @@ import AppBar from './Components/AppBar/AppBar';
 import Container from './Components/Container/Container';
 import Welcome from './Components/Welcome';
 import Users from './Components/Users/Users';
-import Groups from './Components/Groups';
+import Groups from './Components/Groups/Groups';
 
 export default function App() {
   return (
